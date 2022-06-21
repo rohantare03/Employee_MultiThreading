@@ -29,6 +29,11 @@ namespace EmployeeTestCases
             emppayroll.AddEmployee(employeeDetails);
             DateTime StopDateTimes = DateTime.Now;
             Console.WriteLine("Duration without threads: " + (StopDateTimes - StartDateTime));
+
+            DateTime StartDateTimeThread = DateTime.Now;
+            emppayroll.AddEmployeePayrollThread(employeeDetails);
+            DateTime StopDateTimeThread = DateTime.Now;
+            Console.WriteLine("Duration with threads: " + (StopDateTimeThread - StartDateTimeThread));
         }
     }
 }
